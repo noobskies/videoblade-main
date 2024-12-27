@@ -14,8 +14,7 @@ const nextConfig = {
       }
     ]
   },
-  transpilePackages: ['geist'],
-  distDir: 'dist'
+  transpilePackages: ['geist']
 };
 
 module.exports = nextConfig;

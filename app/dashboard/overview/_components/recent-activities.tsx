@@ -10,7 +10,7 @@ export function RecentActivities() {
         </Avatar>
         <div className="ml-4 flex-1 space-y-1">
           <p className="text-sm font-medium leading-none">
-            "How to Boost Productivity"
+            &quot;How to Boost Productivity&quot;
           </p>
           <p className="text-sm text-muted-foreground">Scheduled for Twitter</p>
         </div>
@@ -22,7 +22,7 @@ export function RecentActivities() {
         </Avatar>
         <div className="ml-4 flex-1 space-y-1">
           <p className="text-sm font-medium leading-none">
-            "10 Tips for Better Marketing"
+            &quot;10 Tips for Better Marketing&quot;
           </p>
           <p className="text-sm text-muted-foreground">
             Scheduled for Instagram
@@ -36,7 +36,7 @@ export function RecentActivities() {
         </Avatar>
         <div className="ml-4 flex-1 space-y-1">
           <p className="text-sm font-medium leading-none">
-            "The Future of Tech in 2024"
+            &quot;The Future of Tech in 2024&quot;
           </p>
           <p className="text-sm text-muted-foreground">
             Scheduled for Facebook
@@ -50,7 +50,7 @@ export function RecentActivities() {
         </Avatar>
         <div className="ml-4 flex-1 space-y-1">
           <p className="text-sm font-medium leading-none">
-            "5 Ways to Stay Fit at Work"
+            &quot;5 Ways to Stay Fit at Work&quot;
           </p>
           <p className="text-sm text-muted-foreground">
             Scheduled for LinkedIn
