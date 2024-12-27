@@ -15,6 +15,7 @@ declare module 'mina-scheduler' {
     onAddEvent: (event: Event) => void;
     onUpdateEvent: (event: Event) => void;
     onDeleteEvent: (id: string) => void;
+    children?: React.ReactNode;
   }
 
   export const SchedulerProvider: React.FC<SchedulerProviderProps>;
