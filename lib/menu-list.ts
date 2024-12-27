@@ -5,6 +5,7 @@ import {
   Bookmark,
   SquarePen,
   LayoutGrid,
+  Calendar, // Add this import
   LucideIcon
 } from 'lucide-react';
 
@@ -44,6 +45,13 @@ export function getMenuList(pathname: string): Group[] {
     {
       groupLabel: 'Contents',
       menus: [
+        {
+          href: '/dashboard/scheduling', // Add this menu item
+          label: 'Calendar',
+          active: pathname.includes('/dashboard/scheduling'),
+          icon: Calendar,
+          submenus: []
+        },
         {
           href: '',
           label: 'Posts',

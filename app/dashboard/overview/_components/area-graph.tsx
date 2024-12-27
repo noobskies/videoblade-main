@@ -17,23 +17,81 @@ import {
   ChartTooltip,
   ChartTooltipContent
 } from '@/components/ui/chart';
+
 const chartData = [
-  { month: 'January', desktop: 186, mobile: 80 },
-  { month: 'February', desktop: 305, mobile: 200 },
-  { month: 'March', desktop: 237, mobile: 120 },
-  { month: 'April', desktop: 73, mobile: 190 },
-  { month: 'May', desktop: 209, mobile: 130 },
-  { month: 'June', desktop: 214, mobile: 140 }
+  {
+    month: 'January',
+    instagram: 186000,
+    tiktok: 80000,
+    youtube: 95000,
+    twitter: 120000,
+    linkedin: 45000
+  },
+  {
+    month: 'February',
+    instagram: 305000,
+    tiktok: 200000,
+    youtube: 140000,
+    twitter: 180000,
+    linkedin: 75000
+  },
+  {
+    month: 'March',
+    instagram: 437000,
+    tiktok: 320000,
+    youtube: 210000,
+    twitter: 250000,
+    linkedin: 110000
+  },
+  {
+    month: 'April',
+    instagram: 573000,
+    tiktok: 490000,
+    youtube: 280000,
+    twitter: 310000,
+    linkedin: 160000
+  },
+  {
+    month: 'May',
+    instagram: 709000,
+    tiktok: 630000,
+    youtube: 350000,
+    twitter: 380000,
+    linkedin: 220000
+  },
+  {
+    month: 'June',
+    instagram: 814000,
+    tiktok: 740000,
+    youtube: 420000,
+    twitter: 450000,
+    linkedin: 290000
+  }
 ];
 
 const chartConfig = {
-  desktop: {
-    label: 'Desktop',
+  posts: {
+    label: 'Posts'
+  },
+  instagram: {
+    label: 'Instagram',
     color: 'hsl(var(--chart-1))'
   },
-  mobile: {
-    label: 'Mobile',
+  tiktok: {
+    label: 'TikTok',
     color: 'hsl(var(--chart-2))'
+  },
+  youtube: {
+    label: 'YouTube',
+    color: 'hsl(var(--chart-3))'
+  },
+  twitter: {
+    label: 'Twitter',
+    color: 'hsl(var(--chart-4))'
+  },
+  linkedin: {
+    label: 'LinkedIn',
+    color: 'hsl(var(--chart-5))'
   }
 } satisfies ChartConfig;
 
@@ -41,10 +99,8 @@ export function AreaGraph() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Area Chart - Stacked</CardTitle>
-        <CardDescription>
-          Showing total visitors for the last 6 months
-        </CardDescription>
+        <CardTitle>Audience Growth</CardTitle>
+        <CardDescription>Follower growth across platforms</CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer
@@ -72,19 +128,43 @@ export function AreaGraph() {
               content={<ChartTooltipContent indicator="dot" />}
             />
             <Area
-              dataKey="mobile"
+              dataKey="linkedin"
               type="natural"
-              fill="var(--color-mobile)"
+              fill="var(--color-linkedin)"
               fillOpacity={0.4}
-              stroke="var(--color-mobile)"
+              stroke="var(--color-linkedin)"
               stackId="a"
             />
             <Area
-              dataKey="desktop"
+              dataKey="twitter"
               type="natural"
-              fill="var(--color-desktop)"
+              fill="var(--color-twitter)"
               fillOpacity={0.4}
-              stroke="var(--color-desktop)"
+              stroke="var(--color-twitter)"
+              stackId="a"
+            />
+            <Area
+              dataKey="youtube"
+              type="natural"
+              fill="var(--color-youtube)"
+              fillOpacity={0.4}
+              stroke="var(--color-youtube)"
+              stackId="a"
+            />
+            <Area
+              dataKey="tiktok"
+              type="natural"
+              fill="var(--color-tiktok)"
+              fillOpacity={0.4}
+              stroke="var(--color-tiktok)"
+              stackId="a"
+            />
+            <Area
+              dataKey="instagram"
+              type="natural"
+              fill="var(--color-instagram)"
+              fillOpacity={0.4}
+              stroke="var(--color-instagram)"
               stackId="a"
             />
           </AreaChart>
@@ -94,7 +174,8 @@ export function AreaGraph() {
         <div className="flex w-full items-start gap-2 text-sm">
           <div className="grid gap-2">
             <div className="flex items-center gap-2 font-medium leading-none">
-              Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
+              Combined growth of 32.4% this month{' '}
+              <TrendingUp className="h-4 w-4" />
             </div>
             <div className="flex items-center gap-2 leading-none text-muted-foreground">
               January - June 2024

@@ -7,7 +7,8 @@ module.exports = {
     './constants/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-    './sections/**/*.{ts,tsx}'
+    './sections/**/*.{ts,tsx}',
+    './node_modules/mina-scheduler/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
     container: {
