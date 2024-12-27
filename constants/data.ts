@@ -138,27 +138,6 @@ export const navItems: NavItem[] = [
     shortcut: ['s', 'm']
   },
   {
-    title: 'Content',
-    url: '#',
-    icon: 'post', // Using 'post' icon
-    isActive: false,
-    shortcut: ['c', 't'],
-    items: [
-      {
-        title: 'All Posts',
-        url: '/dashboard/posts',
-        icon: 'post',
-        shortcut: ['p', 's']
-      },
-      {
-        title: 'Schedule Post',
-        url: '/dashboard/posts/new',
-        icon: 'add', // Using 'add' icon
-        shortcut: ['n', 'p']
-      }
-    ]
-  },
-  {
     title: 'Account',
     url: '#',
     icon: 'billing',

@@ -3,7 +3,7 @@ import { BarGraph } from './bar-graph';
 import { PieGraph } from './pie-graph';
 import { CalendarDateRangePicker } from '@/components/date-range-picker';
 import PageContainer from '@/components/layout/page-container';
-import { RecentSales } from './recent-sales';
+import { RecentActivities } from './recent-activities';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -20,7 +20,7 @@ export default function OverViewPage() {
       <div className="space-y-2">
         <div className="flex items-center justify-between space-y-2">
           <h2 className="text-2xl font-bold tracking-tight">
-            Manage Your Social Content 📱
+            Manage Your Social Content
           </h2>
           <div className="hidden items-center space-x-2 md:flex">
             <CalendarDateRangePicker />
@@ -147,7 +147,7 @@ export default function OverViewPage() {
                   <CardDescription>Next 24 hours schedule</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <RecentSales />
+                  <RecentActivities />
                 </CardContent>
               </Card>
               <div className="col-span-4">
