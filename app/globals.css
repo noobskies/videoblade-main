@@ -1,7 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Add this to your app/globals.css */
 
+/* These styles will force the modal to be visible */
+.backdrop-blur-md {
+  opacity: 1 !important;
+}
+
+[data-slot='wrapper'] {
+  opacity: 1 !important;
+  transform: none !important;
+}
 @layer base {
   :root {
     --background: 20 66% 99%;

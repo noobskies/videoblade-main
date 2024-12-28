@@ -1,3 +1,4 @@
+const { nextui } = require('@nextui-org/theme');
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ['class'],
@@ -8,7 +9,8 @@ module.exports = {
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
     './sections/**/*.{ts,tsx}',
-    './node_modules/mina-scheduler/**/*.{js,ts,jsx,tsx}'
+    './node_modules/mina-scheduler/**/*.{js,ts,jsx,tsx}',
+    './node_modules/@nextui-org/theme/dist/components/modal.js'
   ],
   theme: {
     container: {
@@ -93,5 +95,5 @@ module.exports = {
       }
     }
   },
-  plugins: [require('tailwindcss-animate')]
+  plugins: [require('tailwindcss-animate'), nextui()]
 };
