@@ -1,3 +1,6 @@
+'use client';
+
+import { useState } from 'react';
 import { AreaGraph } from './area-graph';
 import { BarGraph } from './bar-graph';
 import { PieGraph } from './pie-graph';
@@ -13,8 +16,10 @@ import {
   CardTitle
 } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import SchedulePostModal from '../../scheduling/_components/SchedulePostModal';
 
 export default function OverViewPage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <PageContainer scrollable>
       <div className="space-y-2">
@@ -24,7 +29,13 @@ export default function OverViewPage() {
           </h2>
           <div className="hidden items-center space-x-2 md:flex">
             <CalendarDateRangePicker />
-            <Button>Schedule Post</Button>
+            <Button onClick={() => setIsModalOpen(true)}>Open Modal</Button>
+            <SchedulePostModal
+              open={isModalOpen}
+              onOpenChange={setIsModalOpen}
+              register={() => {}}
+              errors={{}}
+            />
           </div>
         </div>
         <Tabs defaultValue="overview" className="space-y-4">

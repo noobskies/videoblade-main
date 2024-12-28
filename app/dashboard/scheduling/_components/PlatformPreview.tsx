@@ -1,3 +1,4 @@
+// app/dashboard/scheduling/_components/PlatformPreview.tsx
 'use client';
 
 import React from 'react';

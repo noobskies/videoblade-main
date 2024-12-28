@@ -11,28 +11,44 @@ const platformIcons = {
   linkedin: { icon: Linkedin, color: 'text-blue-700' }
 };
 
-const PlatformSelector = ({ selectedPlatforms, onToggle }) => (
-  <div className="mb-6 flex flex-wrap gap-3">
-    {Object.entries(platformIcons).map(([platform, { icon: Icon, color }]) => (
-      <div
-        key={platform}
-        className={`flex cursor-pointer items-center gap-2 rounded-lg border p-2 transition-all
-          ${
-            selectedPlatforms.includes(platform)
-              ? 'border-primary bg-primary/5'
-              : 'border-gray-200 hover:border-gray-300'
-          }`}
-        onClick={() => onToggle(platform)}
-      >
-        <Icon className={`h-5 w-5 ${color}`} />
-        <span className="capitalize">{platform}</span>
-        <Checkbox
-          checked={selectedPlatforms.includes(platform)}
-          className="ml-2"
-        />
-      </div>
-    ))}
-  </div>
-);
+interface PlatformSelectorProps {
+  selectedPlatforms: string[];
+  onToggle: (platform: string) => void;
+}
+
+const PlatformSelector: React.FC<PlatformSelectorProps> = ({
+  selectedPlatforms,
+  onToggle
+}) => {
+  return (
+    <div className="mb-6 flex flex-wrap gap-3">
+      {Object.entries(platformIcons).map(
+        ([platform, { icon: Icon, color }]) => {
+          const isSelected = selectedPlatforms.includes(platform);
+
+          return (
+            <label
+              key={platform}
+              className={`flex cursor-pointer items-center gap-2 rounded-lg border p-2 transition-all
+              ${
+                isSelected
+                  ? 'border-primary bg-primary/5'
+                  : 'border-gray-200 hover:border-gray-300'
+              }`}
+            >
+              <Icon className={`h-5 w-5 ${color}`} />
+              <span className="capitalize">{platform}</span>
+              <Checkbox
+                checked={isSelected}
+                className="ml-2"
+                onCheckedChange={() => onToggle(platform)}
+              />
+            </label>
+          );
+        }
+      )}
+    </div>
+  );
+};
 
 export default PlatformSelector;
